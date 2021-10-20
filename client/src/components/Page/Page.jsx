@@ -25,13 +25,13 @@ const Page = () => {
         }
       ])
     
-      useEffect(() => {
+    useEffect(() => {
         fetch('/weathers').then(res => {
           if(res.ok) {
             return res.json()
           }
         }).then(jsonRes => setWeathers(jsonRes))
-      },[])
+    },[])
 
     const { isError, isLoading, forecast, submitRequest } = useForecast();
 
@@ -65,7 +65,7 @@ const Page = () => {
               
                 <div className={`${styles.grid}`}>
                    
-                {this.props.data.weathers.map(function(weather){
+                {weathers.map(weather => {
                      return(  
                     <>
                     <div className={`${styles.card} position-relative`}>
