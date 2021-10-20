@@ -31,7 +31,7 @@ const Page = () => {
             return res.json()
           }
         }).then(jsonRes => setWeathers(jsonRes))
-      })
+      },[])
 
     const { isError, isLoading, forecast, submitRequest } = useForecast();
 
@@ -65,14 +65,14 @@ const Page = () => {
               
                 <div className={`${styles.grid}`}>
                    
-                {weathers.map(weather => {
+                {this.props.data.weathers.map(function(weather){
                      return(  
                     <>
                     <div className={`${styles.card} position-relative`}>
                         
                         <div className={`${styles.box1} position-relative`}>
                             <div>
-                            <img src={`http://openweathermap.org/img/wn/${weather.wheaIcon}@2x.png`}alt="imgicon"/>
+                                <img src={`http://openweathermap.org/img/wn/${weather.wheaIcon}@2x.png`}alt="imgicon"/>
                                 <h1>{weather.localTitle}, {weather.wheaCount}</h1>
                                 <p>Type: {weather.localType}</p>
                                 <p>Coord: <br/>{weather.localLatLon}</p> 
@@ -82,7 +82,6 @@ const Page = () => {
                             </div>
                             <div className={`${styles.box2} position-relative`}>
                                 <p>Status:<br/>{weather.wheaStatusDesc}</p>
-                                
                                 <p>Pressure:<br/>{weather.wheaPressure}mb</p>
                                 <p>Humid:<br/>{weather.wheaHumid}%</p>
                                 
