@@ -1,0 +1,16 @@
+.loginContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    max-width: 500px;
+  }
+
+  .formContainer {
+    margin: 20px;
+    padding: 10px;
+    background-color: rgb(24, 54, 94);
+    border-radius: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
