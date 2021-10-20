@@ -26,11 +26,14 @@ const Page = () => {
       ])
     
     useEffect(() => {
-        fetch('/weathers').then(res => {
-          if(res.ok) {
-            return res.json()
-          }
-        }).then(jsonRes => setWeathers(jsonRes))
+        fetch('/weathers')
+        .then((res) => res.json())
+        .then((jsonRes) => {
+            setWeathers(jsonRes)
+        })
+        .catch((err) => {
+            console.log(err);
+        });
     },[])
 
     const { isError, isLoading, forecast, submitRequest } = useForecast();
@@ -64,7 +67,6 @@ const Page = () => {
                 </h1>
               
                 <div className={`${styles.grid}`}>
-                   
                 {weathers.map(weather => {
                      return(  
                     <>
