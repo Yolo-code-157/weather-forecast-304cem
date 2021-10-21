@@ -34,8 +34,9 @@ const Page = () => {
         .catch((err) => {
             console.log(err);
         });
+        
     },[])
-
+    
     const { isError, isLoading, forecast, submitRequest } = useForecast();
 
     const onSubmit = value => {
@@ -70,7 +71,8 @@ const Page = () => {
                 {weathers && weathers.map(weather => {
                      return(  
                     <>
-                    <div className={`${styles.card} position-relative`}>
+                    {console.log(weathers)
+                    /* <div className={`${styles.card} position-relative`}>
                         
                         <div className={`${styles.box1} position-relative`}>
                             <div>
@@ -93,7 +95,7 @@ const Page = () => {
                                 <br/>
                             </div>
                         </div>    
-                    </div> 
+                    </div>  */}
                     </> 
                     )  
                 })} 
