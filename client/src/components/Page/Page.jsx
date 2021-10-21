@@ -32,7 +32,7 @@ const Page = () => {
             },
         };
 
-        await fetch('/weathers', config)
+        await fetch('https://weather-forecast-304cem.herokuapp.com/weathers', config)
         .then(res=>{
             if(res.ok){
               return res.json()
