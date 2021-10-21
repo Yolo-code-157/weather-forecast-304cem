@@ -25,8 +25,8 @@ const Page = () => {
         }
       ])
     
-    useEffect(() => {
-        fetch('/weathers')
+    useEffect( async () => {
+        await fetch('/weathers')
         .then((res) => res.json())
         .then((jsonRes) => {
             setWeathers(jsonRes);
@@ -34,7 +34,6 @@ const Page = () => {
         .catch((err) => {
             console.log(err);
         });
-        
     },[])
     
     const { isError, isLoading, forecast, submitRequest } = useForecast();
