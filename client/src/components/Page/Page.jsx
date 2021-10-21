@@ -70,7 +70,7 @@ const Page = () => {
                 {weathers && weathers.map(weather => {
                      return(  
                     <>
-                    {console.log(weathers)
+                    {console.log(weather)
                     /* <div className={`${styles.card} position-relative`}>
                         
                         <div className={`${styles.box1} position-relative`}>
