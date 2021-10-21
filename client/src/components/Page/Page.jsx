@@ -56,6 +56,7 @@ const Page = () => {
         // console.log(id);
         axios.delete('/delete/' + id);
         alert("Selected weather profile is deleted");
+        window.location.reload(false);
     }
 
     return (
