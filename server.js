@@ -35,8 +35,8 @@ if(process.env.NODE_ENV === 'production'){
         res.send("Server running on web");
     })  
 }
-
 //--------------------deployment--------------------
+
 //Get Weather
 app.get('/weathers', (req, res) =>{
     WeaValue.find().then(weather_stats => res.json(weather_stats));

@@ -29,7 +29,7 @@ const Page = () => {
         fetch('/weathers')
         .then((res) => res.json())
         .then((jsonRes) => {
-            setWeathers(jsonRes)
+            setWeathers(jsonRes);
         })
         .catch((err) => {
             console.log(err);
@@ -67,7 +67,7 @@ const Page = () => {
                 </h1>
               
                 <div className={`${styles.grid}`}>
-                {weathers.map(weather => {
+                {weathers && weathers.map(weather => {
                      return(  
                     <>
                     <div className={`${styles.card} position-relative`}>
