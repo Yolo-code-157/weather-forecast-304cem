@@ -26,8 +26,18 @@ const Page = () => {
       ])
     
     useEffect( async () => {
-        await fetch('/weathers')
-        .then((res) => res.json())
+        const config ={
+            headers: {
+                "Content-type": "application/json",
+            },
+        };
+
+        await fetch('/weathers', config)
+        .then(res=>{
+            if(res.ok){
+              return res.json()
+            }
+          })
         .then((jsonRes) => {
             setWeathers(jsonRes);
         })
@@ -70,8 +80,8 @@ const Page = () => {
                 {weathers && weathers.map(weather => {
                      return(  
                     <>
-                    {console.log(weather)
-                    /* <div className={`${styles.card} position-relative`}>
+                    {/* console.log(weather) */}
+                    <div className={`${styles.card} position-relative`}>
                         
                         <div className={`${styles.box1} position-relative`}>
                             <div>
@@ -94,7 +104,7 @@ const Page = () => {
                                 <br/>
                             </div>
                         </div>    
-                    </div>  */}
+                    </div>
                     </> 
                     )  
                 })} 

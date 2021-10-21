@@ -50,13 +50,20 @@ const useForecast = () => {
     const submitRequest = async location => {
         setLoading(true);
         setError(false);
+        
+        const config ={
+            headers: {
+                "Content-type": "application/json",
+            },
+        };
 
         const response = await getWoeid(location);
         if (!response?.woeid) return;
 
         const data = await getForecastData(response.woeid);
         if (!data) return;
-        axios.post('/newWeather', { location });
+        
+        axios.post('/newWeather', { location }, config);
         gatherForecastData(data);
     };
 
