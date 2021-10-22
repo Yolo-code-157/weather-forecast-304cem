@@ -31,7 +31,7 @@ const Page = () => {
                 "Content-type": "application/json",
             },
         };
-        fetch('/weathers', config)
+        fetch('https://weather-forecast-304cem.herokuapp.com/weathers', config)
         // fetch('/weathers', config)
         .then(res => res.json())
         .then(jsonRes => setWeathers(jsonRes))

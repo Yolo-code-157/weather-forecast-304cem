@@ -23,7 +23,6 @@ app.use(errorHandler);
 
 
 //--------------------deployment--------------------
-__dirname = path.resolve();
 if(process.env.NODE_ENV === 'production'){
     app.use(express.static(path.join(__dirname, '/client/build')));
 
@@ -101,8 +100,6 @@ app.delete('/delete/:id', (req, res) => {
         }
     })
 })
-
-
 
 //Port listen
 app.listen(PORT, ()=>{
