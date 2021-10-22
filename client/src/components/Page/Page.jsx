@@ -28,7 +28,7 @@ const Page = () => {
     useEffect( async () => {
         const config ={
             headers: {
-                "Content-type": "application/json",
+                "Content-type": "multipart/form-data",
             },
         };
 
