@@ -33,9 +33,11 @@ const Page = () => {
         };
 
         fetch('/weathers', config)
-        .then(res => res.json())
+        .then(res => res.text())
         // .then(jsonRes => setWeathers(jsonRes))
+        
         .then(json => console.log(json))
+
         // .then(res=>{
         //     if(res.ok){
         //       return res.json()
