@@ -11,7 +11,7 @@ function App() {
         <BrowserRouter>
         <Header />
         <main>
-            <Route path="/myweather" component={LandingPage} exact />
+            <Route path="/landingpage" component={LandingPage} exact />
 
             <Route path="/login" component={LoginScreen} exact />
             <Route path="/register" component={RegisterScreen} exact />

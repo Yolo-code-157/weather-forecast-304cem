@@ -23,7 +23,7 @@ const Header = () => {
 
               <Nav>
                   <Nav.Link>
-                      <Link to="/myweather">My Weather</Link>
+                      <Link to="/landingpage">SignIn/Register</Link>
                   </Nav.Link>
                   <NavDropdown title="Profile" id="basic-nav-dropdown">
                       <NavDropdown.Item onClick={()=>{
