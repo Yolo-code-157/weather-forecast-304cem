@@ -31,7 +31,7 @@ const Page = () => {
                 "Content-type": "application/json",
             },
         };
-        fetch('http://localhost:5000/weathers', config)
+        fetch('/weathers', config)
         // fetch('/weathers', config)
         .then(res => res.json())
         .then(jsonRes => setWeathers(jsonRes))
