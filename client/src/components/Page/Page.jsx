@@ -25,18 +25,19 @@ const Page = () => {
         }
       ])
     
-    useEffect(() => {
+    useEffect((jsonRes) => {
         const config ={
             headers: {
                 "Content-type": "application/json",
             },
+            body: JSON.stringify(jsonRes),
         };
 
         fetch('/weathers', config)
-        .then(res => res.text())
-        // .then(jsonRes => setWeathers(jsonRes))
+        .then(res => res.json())
+        .then(jsonRes => setWeathers(jsonRes))
         
-        .then(json => console.log(json))
+        // .then(json => console.log(json))
 
         // .then(res=>{
         //     if(res.ok){
