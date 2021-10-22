@@ -31,24 +31,10 @@ const Page = () => {
                 "Content-type": "application/json",
             },
         };
-        fetch('https://weather-forecast-304cem.herokuapp.com/weathers', config)
-        // fetch('/weathers', config)
+        fetch('/weathers', config)
         .then(res => res.json())
         .then(jsonRes => setWeathers(jsonRes))
         .catch(err => console.log(err))
-        // .then(json => console.log(json))
-
-        // .then(res=>{
-        //     if(res.ok){
-        //       return res.json()
-        //     }
-        //   })
-        // .then((jsonRes) => {
-        //     setWeathers(jsonRes);
-        // })
-        // .catch((err) => {
-        //     console.log(err);
-        // });
     })
     
     const { isError, isLoading, forecast, submitRequest } = useForecast();
