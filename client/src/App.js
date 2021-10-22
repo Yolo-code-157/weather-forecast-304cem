@@ -11,12 +11,12 @@ function App() {
         <BrowserRouter>
         <Header />
         <main>
-            <Route path="/" component={LandingPage} exact />
+            <Route path="/myweather" component={LandingPage} exact />
 
             <Route path="/login" component={LoginScreen} exact />
             <Route path="/register" component={RegisterScreen} exact />
 
-            <Route path="/myweather" component={() => <Page />}/>
+            <Route path="/" component={() => <Page />}/>
         </main>
         
         </BrowserRouter>
