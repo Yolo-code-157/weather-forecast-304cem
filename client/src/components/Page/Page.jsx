@@ -32,7 +32,7 @@ const Page = () => {
             },
         };
 
-        await fetch('http://localhost:5000/weathers', config)
+        await fetch('/weathers', config)
         .then(res=>{
             if(res.ok){
               return res.json()
