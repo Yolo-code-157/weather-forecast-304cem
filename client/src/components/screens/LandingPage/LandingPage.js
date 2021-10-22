@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 const LandingPage = () => {
     
     return (
+        <Fragment>
         <div className="main">
                 <div>
                     <h1>Welcome To Weather Forecast</h1>
@@ -28,6 +29,7 @@ const LandingPage = () => {
                 </Link>
                 </div>
         </div>
+        </Fragment>
     );
 }
 
