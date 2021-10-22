@@ -19,7 +19,7 @@ const LoginScreen = ({}) => {
     useEffect(() => {
         const userInfo = localStorage.getItem('userInfo');
         if (userInfo) {
-            history.push("/myweather");
+            history.push("/");
           }
     }, [history]);
 

@@ -44,7 +44,7 @@ const RegisterScreen = () => {
                 console.log(data);
                 setLoading(false);
                 localStorage.setItem('userInfo', JSON.stringify(data));
-                history.push("/myweather");
+                history.push("/");
             } catch (error) {
                 setError(error.response.data.message);
                 setLoading(false);

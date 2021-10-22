@@ -7,7 +7,6 @@ const LandingPage = () => {
     
     return (
         <div className="main">
-            <Container>
                 <div>
                     <h1>Welcome To Weather Forecast</h1>
                 </div>
@@ -28,7 +27,6 @@ const LandingPage = () => {
                     </Button>
                 </Link>
                 </div>
-            </Container>
         </div>
     );
 }
