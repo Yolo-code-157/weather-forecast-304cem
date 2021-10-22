@@ -25,25 +25,28 @@ const Page = () => {
         }
       ])
     
-    useEffect( async () => {
+    useEffect(() => {
         const config ={
             headers: {
-                "Content-type": "multipart/form-data",
+                "Content-type": "application/json",
             },
         };
 
-        await fetch('/weathers', config)
-        .then(res=>{
-            if(res.ok){
-              return res.json()
-            }
-          })
-        .then((jsonRes) => {
-            setWeathers(jsonRes);
-        })
-        .catch((err) => {
-            console.log(err);
-        });
+        fetch('/weathers', config)
+        .then(res => res.json())
+        // .then(jsonRes => setWeathers(jsonRes))
+        .then(json => console.log(json))
+        // .then(res=>{
+        //     if(res.ok){
+        //       return res.json()
+        //     }
+        //   })
+        // .then((jsonRes) => {
+        //     setWeathers(jsonRes);
+        // })
+        // .catch((err) => {
+        //     console.log(err);
+        // });
     })
     
     const { isError, isLoading, forecast, submitRequest } = useForecast();
