@@ -80,13 +80,26 @@ app.post('/newWeather', (req, res) =>{
             weaValue
                 .save()
                 .then((result) => {
-                console.log("Success" + result);
+                res.status(201).json(
+                    {
+                        localTitle:     countryTitle,
+                        localType:      countryType,
+                        localLatLon:    countryLatLon,
+                        wheaStatus:     wheatherStatus,
+                        wheaStatusDesc: wheatherDesc,
+                        wheaIcon:       weatherIcon,
+                        wheaCount:      weatherCountry, 
+                        wheaPressure:   wheatherPressure,
+                        wheaHumid:      wheatherHumid,
+                    }
+                );
                 })
                 .catch((error) => {
                 console.log("Error" + error);
                 });
         })  
     });
+    console.log("weather added");
 })
 
 //Delete weather
@@ -99,6 +112,9 @@ app.delete('/delete/:id', (req, res) => {
             console.log(err);
         }
     })
+    res.status(201).json({
+        "message":"Weather Profile Has Deleted"
+    });
 })
 
 //Port listen

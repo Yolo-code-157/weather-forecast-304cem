@@ -3,7 +3,7 @@ import React, {Fragment} from 'react'
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-import styles from './LandingPage.css';
+import './LandingPage.css';
 
 const LandingPage = () => {
     

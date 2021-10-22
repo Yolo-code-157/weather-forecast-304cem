@@ -40,7 +40,7 @@ const RegisterScreen = () => {
                 };
                 
                 setLoading(true);
-                const { data } = await axios.post("api/users",{
+                const { data } = await axios.post("api/users/register",{
                     name,
                     email, 
                     password,

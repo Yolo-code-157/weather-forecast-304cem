@@ -26,7 +26,7 @@ const registerUser = asyncHandler(async (req, res) => {
             isAdmin: user.isAdmin,
             token: generateToken(user._id),
         });
-        res.redirect("/myweather");
+        res.redirect("/");
     } else {
         res.status(400);
         throw new Error("Error occured!");
