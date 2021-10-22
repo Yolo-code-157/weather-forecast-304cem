@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Form, Button, Row, Col } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import MainScreen from "../../MainScreen";
@@ -9,6 +9,13 @@ import ErrorMessage from "../../ErrorMessage/ErrorMessage";
 const RegisterScreen = () => {
 
     const history = useHistory();
+
+    useEffect(() => {
+        const userInfo = localStorage.getItem('userInfo');
+        if (userInfo) {
+            history.push("/");
+          }
+    }, [history]);
 
     const [email, setEmail] = useState("");
     const [name, setName] = useState("");
