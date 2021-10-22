@@ -1,5 +1,22 @@
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  border-radius: var(--main-border-radius);
+  -webkit-box-shadow: 0 0 24px 7px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 24px 7px rgba(0, 0, 0, 0.2);
+  background-color:rgb(55, 79, 212);
+  color: var(--main-text-color);
+  width: 85%;
+  max-width: 505px;
+  min-height: 230px;
+}
+
 .title {
     font-size: 95px;
+    background-color: blanchedalmond;
   }
   .subtitle {
     font-size: 25px;
@@ -11,15 +28,16 @@
   }
   .main {
     min-height: 93vh;
-    display: flex;
     align-items: center;
     background-position: center;
     background-size: cover;
-    
+    background-color: rgb(57, 73, 167);
+    text-align: center;
   }
   .buttonContainer {
     margin-top: 50px;
-    display: flex;
+    display:grid;
+    grid-gap: 25px;
     justify-content: space-evenly;
   }
   

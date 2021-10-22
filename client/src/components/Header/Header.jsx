@@ -28,7 +28,7 @@ const Header = () => {
                   <NavDropdown title="Profile" id="basic-nav-dropdown">
                       <NavDropdown.Item onClick={()=>{
                           localStorage.removeItem("userInfo");
-                          history.push("/");
+                          history.push("/landingpage");
                       }}>Logout</NavDropdown.Item>
                   </NavDropdown>
               </Nav>

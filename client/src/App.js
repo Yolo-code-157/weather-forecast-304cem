@@ -16,7 +16,7 @@ function App() {
             <Route path="/login" component={LoginScreen} exact />
             <Route path="/register" component={RegisterScreen} exact />
 
-            <Route path="/" component={() => <Page />}/>
+            <Route path="/" component={Page} exact/>
         </main>
         
         </BrowserRouter>

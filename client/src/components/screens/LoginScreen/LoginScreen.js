@@ -43,7 +43,7 @@ const LoginScreen = ({}) => {
             console.log(data);
             localStorage.setItem('userInfo', JSON.stringify(data));
             setLoading(false);
-            history.push("/myweather");
+            history.push("/");
         } catch (error) {
             setError(error.response.data.message);
             setLoading(false);
