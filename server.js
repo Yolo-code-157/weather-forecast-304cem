@@ -8,7 +8,7 @@ const cors = require("cors");
 const path = require("path");
 const axios = require("axios");
 const userRoutes = require('./routes/userRoutes');
-const { notFound, errorHandler } = require("./middleware/errorMiddleware");
+const { errorHandler } = require("./middleware/errorMiddleware");
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -18,7 +18,6 @@ const PORT = process.env.PORT || 5000;
 
 //where login and register function
 app.use('/api/users', userRoutes);
-// app.use(notFound);
 app.use(errorHandler);
 
 
